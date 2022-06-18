@@ -54,7 +54,7 @@ class NewsController extends Controller
                 ->with('success', 'Article updated successfully!');
         }
         
-        return view('news.edit', ['news' => $news]);
+        return view('news.edit', compact('news'));
     }
 
     

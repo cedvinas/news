@@ -4,6 +4,15 @@
     <div class="container">
         <a href="{{url('/create')}}"><button class="btn btn-secondary">Create an article</button></a>
 
+        @if (session('success'))
+        <div class="row">
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        </div>
+            
+        @endif
+
         <table class="table">
             <tr>
                 <td>ID</td>

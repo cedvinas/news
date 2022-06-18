@@ -11,23 +11,28 @@
     </div>
 
     <div class="row">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Title:</strong>
-                {{ $article->title }}
+                {{ $news->title }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Description:</strong>
-                {{ $article->description }}
+                {{ $news->description }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Active:</strong>
-                {{ $article->active }}
+                {{ $news->active }}
             </div>
         </div>
     </div>

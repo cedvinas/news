@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [NewsController::class, 'index']);
-Route::get('/show/{news}', [NewsController::class, 'show']);
+Route::get('/show/{news}', [NewsController::class, 'show'])->name('show');
 Route::get('/create', [NewsController::class, 'create']);
 Route::post('/create', [NewsController::class, 'create']);
 Route::match(['get', 'post'], '/edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
